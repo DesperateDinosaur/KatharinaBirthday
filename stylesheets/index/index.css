@@ -1,0 +1,210 @@
+#main-div {
+  margin-top: 3em;
+  display: flex;
+  align-items: center;
+}
+
+#game-area {
+  margin-left: auto;
+  width: auto;
+  display: flex;
+}
+
+#game-phone-bg {
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0px 2px 2px #000000);
+  min-width: 380px;
+  min-height: 658px;
+}
+
+#phone-bg {
+  filter: drop-shadow(0px 2px 2px #000000);
+  min-width: 100%;
+}
+
+#game-phone-area {
+  padding: 5px;
+  padding-top: 5em;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  min-width: 370px;
+}
+
+#game-answer-area {
+  display: flex;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 260px;
+}
+
+#game-keyboard-area {
+  display: flex;
+  min-width: 370px;
+}
+
+#game-keyboard-autocomplete-area {
+  display: flex;
+  position: absolute;
+  min-width: 370px;
+  z-index: 3;
+}
+
+.game-keyboard-autocomplete {
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  height: 52px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#game-keyboard-autocomplete-1, #game-keyboard-autocomplete-3 {
+  width: 108px;
+}
+
+#game-keyboard-autocomplete-2 {
+  width: 105px;
+}
+
+#game-keyboard-keys-area {
+  display: flex;
+  min-width: 370px;
+  min-height: 314px;
+}
+
+#keyboard-bg {
+  position: absolute;
+  z-index: 1;
+}
+
+#game-keyboard-keys-letters {
+  z-index: 2;
+  position: absolute;
+  margin-top: 52px;
+  margin-left: 6px;
+  margin-right: 6px;
+  font-size: 0;
+}
+
+#game-keyboard-row-2 {
+  margin-top: 11px;
+  margin-left: 18px;
+}
+
+#game-keyboard-row-3 {
+  display: flex;
+  margin-top: 10px;
+}
+
+#game-keyboard-row-3-letters {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+#game-keyboard-row-4 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10.5px;
+}
+
+.keyboard-key {
+  width: 33px;
+  height: 40px;
+  margin-right: 3px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: rgba(127, 127, 127, 0);
+}
+
+#keyboard-shift, #keyboard-backspace {
+  width: 39px;
+  font-size: 18px;
+  padding-top: 6px;
+}
+
+#keyboard-custom, #keyboard-return {
+  width: 85px;
+  font-size: 18px;
+}
+
+#keyboard-spacebar {
+  width: 179px;
+  font-size: 18px;
+}
+
+#past-answers-area {
+  margin-left: 5em;
+  margin-right: auto;
+  width: 35em;
+  height: 650px;
+  display: flex;
+  position: relative;
+}
+
+.past-answers-fade {
+  width: 35em;
+  height: 1.5em;
+  position: absolute;
+  z-index: 1;
+}
+
+#past-answers-lower-fade {
+  margin-top: 626px;
+}
+
+#past-answers-bubbles {
+  overflow: scroll;
+  overflow-x: hidden;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#past-answers-bubbles::-webkit-scrollbar {
+  display: none;
+}
+
+.past-answer-div {
+  padding: 0.01em 2.0em 1.0em 2.0em;
+  margin: 1.5em 5px 1.5em 5px;
+  min-width: 13.3em;
+  border-radius: 3em;
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  filter: drop-shadow(0px 0px 3px #000000);
+  background-color: #c5b99e;
+  background-image:
+  radial-gradient(
+    circle farthest-corner at top left, rgb(234, 253, 88, 0.65) 0%, rgba(225, 243, 97,0) 20%
+  ),
+  radial-gradient(
+    circle farthest-side at top right, rgb(109, 31, 69, 0.35) 0%, rgba(181, 176, 177,0) 30%
+  ),
+  radial-gradient(
+    circle farthest-corner at bottom right, rgba(204, 104, 119, 0.65) 0%, rgba(204, 104, 119, 0) 33%
+  ),
+  radial-gradient(
+    circle farthest-corner at top right, rgba(138, 35, 135, 0.35) 0%, rgba(138, 35, 135,0) 50%
+  ),
+  radial-gradient(
+    ellipse at bottom center, rgba(254, 43, 0, 0.65) 0%, rgba(254, 43, 0, 0) 80%
+  );
+}
+
+.past-answer-title {
+  color: rgb(0, 0, 0, 0.60);
+  font-size: 30px;
+}
+
+.past-answer-story {
+  color: rgb(0, 0, 0, 0.55);
+  font-size: 20px;
+}

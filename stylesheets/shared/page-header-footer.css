@@ -1,0 +1,103 @@
+html {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  padding: 0.5em;
+
+  /* Light mode bg color */
+  background-color: rgb(230, 230, 230);
+
+  /* Dark mode bg color */
+  /* background-color: rgb(45, 45, 45) */
+}
+
+/* Background color, shadow, size, and padding for header (the navbar) */
+header, footer {
+  height: 5em;
+  width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3em;
+  filter: drop-shadow(0px 0px 3px #000000);
+  background-color: #c5b99e;
+  background-image: 
+  radial-gradient(
+    circle farthest-corner at top left, rgb(234, 253, 88, 0.65) 0%, rgba(225, 243, 97,0) 20%
+  ),
+  radial-gradient(
+    circle farthest-side at top right, rgb(109, 31, 69, 0.35) 0%, rgba(181, 176, 177,0) 30%
+  ),
+  radial-gradient(
+    circle farthest-corner at bottom right, rgba(204, 104, 119, 0.65) 0%, rgba(204, 104, 119, 0) 33%
+  ),
+  radial-gradient(
+    circle farthest-corner at top right, rgba(138, 35, 135, 0.35) 0%, rgba(138, 35, 135,0) 50%
+  ),
+  radial-gradient(
+    ellipse at bottom center, rgba(254, 43, 0, 0.65) 0%, rgba(254, 43, 0, 0) 80%
+  );
+}
+
+footer {
+  width: 30em;
+}
+
+/* Spacing and alignment of items in navbar and footer bar */
+#header-nav-bar, #footer-bar {
+  height: 5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Margin styling exclusive to footer bar */
+#footer-bar {
+  margin-top: 3em;
+}
+
+#theme-toggle {
+  cursor: pointer;
+}
+
+/* Remove hover color for navbar items */
+.header-button:hover {
+  color: rgb(0, 0, 0, 0.60);
+}
+
+/* Initial state of fade in underline animation for navbar items */
+.header-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: rgb(0, 0, 0, 0.60);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Final state of fade in underline animation for navbar items */
+.header-button:hover::after,
+.header-button:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.1em, 0);
+}
+
+/* Styling of individual items in navbar */
+.header-button, #copyright-text {
+  display: block;
+  position: relative;
+  color: rgb(0, 0, 0, 0.60);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Center copyright text */
+#copyright-text {
+  margin-left: auto;
+  margin-right: auto;
+}

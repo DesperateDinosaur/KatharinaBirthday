@@ -1,32 +1,126 @@
-<html>
-  <head>
-    <title>Happy Birthday Kat!</title>
-  </head>
-  <body>
-    <h1>Happy Birthday Kat!</h1>
-    <br>
-    <br>
-    <h2>Lee</h2>
-    <p>At seventy-five, Kat’s the star of the show, Wisdom grows, laughter’s tempo set to slow. Happy birthday<br>-L</p>
-    <br>
-    <br>
-    <h2>Kelsey</h2>
-    <p>Kat, Always strive to live up to your name sake. Cat. Meow.<br>- Kelpy <3</p>
-    <br>
-    <br>
-    <h2>Mykyta</h2>
-    <p>Happy birthday to our favorite top-G (granny)<br>-M</p>
-    <br>
-    <br>
-    <h2>Nolan</h2>
-    <p>Happy birthday Kat! No old person joke from me just a good ol' happy birthday.<br>-N</p>
-    <br>
-    <br>
-    <h2>Bogdan</h2>
-    <p>Happy B-Day Kat! Don't worry, our backs are also getting worse<br>- Boggy -w-</p>
-    <br>
-    <br>
-    <h2>Gabriel</h2>
-    <p>Angelina Katharina Ballerina Mount Saint Helens Orfaghetti.<br> -Yo Gabba Gabba</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Autocomplete Game</title>
+  <script type="text/javascript" src="scripts/index.js"></script>
+  <link rel="stylesheet" href="stylesheets/index/index.css">
+  <link id="stylesheet-index-theme" rel="stylesheet" href="stylesheets/index/index-light.css">
+  <link id="stylesheet-shared" rel="stylesheet" href="stylesheets/shared/page-header-footer.css">
+</head>
+
+<body>
+  <header>
+    <div id="header-nav-bar">
+      <a href="./index.html" id="header-play-button" class="header-button">Play</a>
+      <a href="./explanation.html" id="header-howto-button" class="header-button">How to play</a>
+      <a href="./about.html" id="header-about-button" class="header-button">About</a>
+      <img id="theme-toggle" src="./assets/vectors/light_mode_icon.svg" onclick="toggleTheme()" alt="Theme toggle. Current theme is light.">
+    </div>
+  </header>
+  <div id="main-div">
+    <div id="left-margin"></div>
+    <div id="game-area">
+      <div id="game-phone-bg">
+        <img id="phone-bg" src="./assets/vectors/phone_dark.svg" alt="Outline of a phone with a pill-shaped cutout at the top of the display."/>
+      </div>
+      <div id="game-phone-area">
+        <div id="game-answer-area">
+          <p id="game-answer-text">Phone answer goes here</p>
+        </div>
+        <div id="game-keyboard-area">
+          <div id="game-keyboard-autocomplete-area">
+            <div class="game-keyboard-autocomplete" id="game-keyboard-autocomplete-1">
+              <p id="autocomplete-1" class="autocomplete-word">Welcome</p>
+            </div>
+            <div class="game-keyboard-autocomplete" id="game-keyboard-autocomplete-2">
+              <p id="autocomplete-2" class="autocomplete-word">to</p>
+            </div>
+            <div class="game-keyboard-autocomplete" id="game-keyboard-autocomplete-3">
+              <p id="autocomplete-3" class="autocomplete-word">AutoStory!</p>
+            </div>
+          </div>
+          <div id="game-keyboard-keys-area">
+            <div id="game-keyboard-keys-bg">
+              <img id="keyboard-bg" src="./assets/vectors/keyboard_dark.svg" alt="Phone keyboard."/>
+            </div>
+            <div id="game-keyboard-keys-letters">
+              <div id="game-keyboard-row-1">
+                <button class="keyboard-key">Q</button>
+                <button class="keyboard-key">W</button>
+                <button class="keyboard-key">E</button>
+                <button class="keyboard-key">R</button>
+                <button class="keyboard-key">T</button>
+                <button class="keyboard-key">Y</button>
+                <button class="keyboard-key">U</button>
+                <button class="keyboard-key">I</button>
+                <button class="keyboard-key">O</button>
+                <button class="keyboard-key">P</button>
+              </div>
+              <div id="game-keyboard-row-2">
+                <button class="keyboard-key">A</button>
+                <button class="keyboard-key">S</button>
+                <button class="keyboard-key">D</button>
+                <button class="keyboard-key">F</button>
+                <button class="keyboard-key">G</button>
+                <button class="keyboard-key">H</button>
+                <button class="keyboard-key">J</button>
+                <button class="keyboard-key">K</button>
+                <button class="keyboard-key">L</button>
+              </div>
+              <div id="game-keyboard-row-3">
+                <button id="keyboard-shift" class="keyboard-key" alt="Shift key on keyboard.">
+                  <img id="keyboard-shift-img" src="./assets/vectors/shift_light.svg">
+                </button>
+                <div id="game-keyboard-row-3-letters">
+                  <button class="keyboard-key">Z</button>
+                  <button class="keyboard-key">X</button>
+                  <button class="keyboard-key">C</button>
+                  <button class="keyboard-key">V</button>
+                  <button class="keyboard-key">B</button>
+                  <button class="keyboard-key">N</button>
+                  <button class="keyboard-key">M</button>
+                </div>
+                <button id="keyboard-backspace" class="keyboard-key">
+                  <img id="keyboard-backspace-img" src="./assets/vectors/backspace_light.svg" alt="Backspace key on keyboard.">
+                </button>
+              </div>
+              <div id="game-keyboard-row-4">
+                <button id="keyboard-custom" class="keyboard-key">free: 3</button>
+                <button id="keyboard-spacebar" class="keyboard-key">space</button>
+                <button id="keyboard-return" class="keyboard-key">return</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="past-answers-area">
+      <div id="past-answers-upper-fade" class="past-answers-fade"></div>
+      <div id="past-answers-lower-fade" class="past-answers-fade"></div>
+      <div id="past-answers-bubbles">
+        <div id="past-answer-div-1" class="past-answer-div">
+          <p id="past-answer-title-1" class="past-answer-title">AutoStory #1</p>
+          <p id="past-answer-story-1" class="past-answer-story">Answer goes here. It's a little longer than just one sentence, so it might overflow, but that's alright if it's for testing the styling.</p>
+        </div>
+        <div id="past-answer-div-2" class="past-answer-div">
+          <p id="past-answer-title-2" class="past-answer-title">AutoStory #2</p>
+          <p id="past-answer-story-2" class="past-answer-story">Answer goes here. This one might be more representative of what to expect the length of a final, complete story to be. I'm not sure yet if I'm going to incorporate punctuation into the keyboard or if the users are just going to slap words together to make one long run-on sentence, but it probably wouldn't be too difficult to implement. I might have to modify the keyboard graphic to include punctuation keys for a period and a comma. That left-most key on the bottom row next to the spacebar looks like a good candidate to be broken up into 2 keys for period and comma.</p>
+        </div>
+        <div id="past-answer-div-3" class="past-answer-div">
+          <p id="past-answer-title-3" class="past-answer-title">AutoStory #300</p>
+          <p id="past-answer-story-3" class="past-answer-story">Answer goes here. This is a shorter one.</p>
+        </div>
+      </div>
+    </div>
+    <div id="right-margin"></div>
+  </div>
+  <footer>
+    <div id="footer-bar">
+      <p id="copyright-text">AutoStory &copy; 2024 Gabriel Internoscia</p>
+    </div>
+  </footer>
+</body>
+
 </html>

@@ -1,0 +1,23 @@
+#game-answer-text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.autocomplete-word {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.keyboard-key {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#keyboard-custom {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#past-answers-upper-fade {
+  background: linear-gradient(rgba(45, 45, 45, 1.0), rgba(0, 0, 0, 0.0));
+}
+
+#past-answers-lower-fade {
+  background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(45, 45, 45, 1.0));
+}
