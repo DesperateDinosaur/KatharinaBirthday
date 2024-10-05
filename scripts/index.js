@@ -12,33 +12,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function getTheme() {
   if (localStorage.getItem('theme') === null) {
-    localStorage.setItem('theme', 'light');
-  } else {
-    let theme = localStorage.getItem('theme');
+    localStorage.setItem('theme', 'auto');
+  }
+  let theme = localStorage.getItem('theme');
 
-    if (theme === 'light') {
-      setLight();
-    }
-    else if (theme === 'dark') {
-      setDark();
-    }
-    else if (theme === 'auto') {
+  if (theme === 'light') {
+    setLight();
+  }
+  else if (theme === 'dark') {
+    setDark();
+  }
+  else if (theme === 'auto') {
 
-      // Check to see if Media-Queries are supported
-      if (window.matchMedia) {
+    // Check to see if Media-Queries are supported
+    if (window.matchMedia) {
 
-        // Check if the dark-mode Media-Query matches
-        if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-          setDark();
-        } else {
-          setLight();
-        }
+      // Check if the dark-mode Media-Query matches
+      if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+        setDark();
       } else {
         setLight();
       }
-      document.getElementById('theme-toggle').src = 'assets/vectors/auto_mode_icon.svg';
-      document.getElementById('theme-toggle').alt = 'Theme toggle. Current theme is based on your browser preferences.';
+    } else {
+      setLight();
     }
+    document.getElementById('theme-toggle').src = 'assets/vectors/auto_mode_icon.svg';
+    document.getElementById('theme-toggle').alt = 'Theme toggle. Current theme is based on your browser preferences.';
   }
 }
 
