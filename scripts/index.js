@@ -89,7 +89,7 @@ async function getData() {
       {
         headers: {
           "Content-Type": "application/json",
-          "X-Api-Key": "Y+szJgbC2jy7fYrSZxNUtg==7l2aMeTExrYw50sB"
+          "X-Api-Key": "shhhhhhh"
         }
       }
     );
