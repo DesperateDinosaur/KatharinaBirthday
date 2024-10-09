@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Autocomplete Game</title>
-  <script type="text/javascript" src="scripts/index.js"></script>
+  <title>AutoStory - How to Play</title>
+  <script type="module" src="scripts/index.mjs"></script>
+  <script type="module" src="scripts/theme.mjs"></script>
   <link rel="stylesheet" href="stylesheets/index/index.css">
   <link id="stylesheet-index-theme" rel="stylesheet" href="stylesheets/index/index-light.css">
   <link id="stylesheet-shared" rel="stylesheet" href="stylesheets/shared/page-header-footer.css">
+  <link id="stylesheet-shared-theme" rel="stylesheet" href="stylesheets/shared/page-header-footer-light.css">
 </head>
 
 <body>
@@ -16,7 +18,7 @@
       <a href="./index.html" id="header-play-button" class="header-button">Play</a>
       <a href="./explanation.html" id="header-howto-button" class="header-button">How to play</a>
       <a href="./about.html" id="header-about-button" class="header-button">About</a>
-      <img id="theme-toggle" src="./assets/vectors/light_mode_icon.svg" onclick="toggleTheme()" alt="Theme toggle. Current theme is light.">
+      <img id="theme-toggle" src="./assets/vectors/light_mode_icon.svg" onclick="toggleTheme('index')" alt="Theme toggle. Current theme is light.">
     </div>
   </header>
   <div id="main-div">

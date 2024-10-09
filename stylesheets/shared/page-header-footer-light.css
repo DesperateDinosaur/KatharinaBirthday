@@ -1,0 +1,9 @@
+body {
+  /* Light mode bg color */
+  background-color: rgb(230, 230, 230);
+}
+
+/* Light mode background color beneath gradient for header (navbar) and footer (copyright) */
+header, footer {
+  background-color: rgb(195, 185, 161);
+}

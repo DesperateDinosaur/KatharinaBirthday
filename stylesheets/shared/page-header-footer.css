@@ -4,15 +4,9 @@ html {
 
 body {
   padding: 0.5em;
-
-  /* Light mode bg color */
-  background-color: rgb(230, 230, 230);
-
-  /* Dark mode bg color */
-  /* background-color: rgb(45, 45, 45) */
 }
 
-/* Background color, shadow, size, and padding for header (the navbar) */
+/* Background gradient, shadow, size, and padding for header (navbar) and footer (copyright) */
 header, footer {
   height: 5em;
   width: 30em;
@@ -20,7 +14,6 @@ header, footer {
   margin-right: auto;
   border-radius: 3em;
   filter: drop-shadow(0px 0px 3px #000000);
-  background-color: #c5b99e;
   background-image: 
   radial-gradient(
     circle farthest-corner at top left, rgb(234, 253, 88, 0.65) 0%, rgba(225, 243, 97,0) 20%

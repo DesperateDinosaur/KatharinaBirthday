@@ -1,0 +1,9 @@
+body {
+  /* Dark mode bg color */
+  background-color: rgb(45, 45, 45)
+}
+
+/* Dark mode background color beneath gradient for header (navbar) and footer (copyright) */
+header, footer {
+  background-color: rgb(120, 113, 95);
+}
