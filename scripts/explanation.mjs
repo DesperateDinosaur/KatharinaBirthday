@@ -1,7 +1,8 @@
-import { setTheme, toggleTheme } from './theme.mjs';
+import { setTheme, toggleTheme, setFont, toggleFont } from './theme.mjs';
 
 document.addEventListener("DOMContentLoaded", function(event) {
   setTheme('explanation');
+  setFont();
   
   // Set event listener to dynamically detect changes in light/dark mode
   if(window.matchMedia){
@@ -13,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Functionaliy for light/dark button toggle
   window.toggleTheme = toggleTheme;
+
+  // Functionality for font button toggle
+  window.toggleFont = toggleFont;
 });
 
 async function getData() {
